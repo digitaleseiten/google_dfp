@@ -29,7 +29,7 @@ $(function(){
       // define Slot
       if(size){
         size = size.split(" ").map(function(v){ return v.split("x").map(function(w){ return parseInt(w) }) });
-        googleAdSlot = googletag.defineSlot(unit, size, this.id);
+        googleAdSlot = googletag.defineSlot(unit, size, this.id).setCollapseEmptyDiv(true);
       }
       else{
         googleAdSlot = googletag.defineOutOfPageSlot(unit, this.id);
